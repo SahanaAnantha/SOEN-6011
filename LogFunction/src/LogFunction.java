@@ -73,7 +73,7 @@ public class LogFunction {
         if (base < 0) {
           System.out.println("Please enter the value of base greater than 0");
         } else if (base == 1) {
-          System.out.println("The value of base equal to 1 is not defineds ");
+          System.out.println("The value of base equal to 1 is not defined ");
         } else {
           double result1 = (float) calculateLog(xval);
           double result2 = (float) calculateLog(base);
