@@ -1,0 +1,133 @@
+\documentclass[12pt]{report}
+\usepackage[utf8x]{inputenc}
+\usepackage[myheadings]{fullpage}
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+\usepackage{color}
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+\setlength\headheight{15pt}
+\fancyhead[R]{ETERNITY : FUNCTION : log_{b}(x)}
+
+\title{D2 : Logarithmic Function}	
+\author{Sahana Anantha}	
+\date{}
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thetitle}
+\cfoot{\thepage}
+
+\begin{document}
+
+\title{ \Large \text{{SOEN-6011   SOFTWARE ENGINEERING PROCESS}}
+		\\ [2.0cm]
+		\HRule{2pt} \\ [0.5cm]
+		\LARGE \textbf{\uppercase{ETERNITY : function : log_{b}(x)}}\\
+		\HRule{2pt} \\ [0.5cm]
+		\textbf{{\Large Deliverable 2}}\\
+		\normalsize  \vspace*{5\baselineskip}}
+
+\date{}
+\author{\LARGE \textbf{
+		SAHANA ANANTHA \\
+		\Large \text{Student Id} : \text{ 40085533}\\
+        \Large \text{Guided By} - Prof. PANKAJ KAMTHAN  \\
+\Large \text {CONCORDIA UNIVERSITY}\\
+\small \text  https://github.com/SahanaAnantha/SOEN-6011 \\}}
+
+\maketitle
+
+
+\renewcommand{\thesection}{\arabic{section}}
+\section{Debugger}
+\subsection{Description}
+Debugger allows us to analyze the code written and makes us understand proceed with coding. The value of the variables can be changed while debugging the code which is an advantage.
+
+
+
+\subsection{Advantages :}
+\begin{itemize}
+    \item The eclipse debugger helps in reducing the number of times of recompiling.
+    \item It helps in reduce to write the print statements every time while writing the code.
+    \item The eclipse by itself prints or shows the value of the line of code while debugging.
+    \item It helps in reviewing or understanding the logic behind the code written by others.
+    \item It helps in analyzing the unknown errors while coding be it errors or exceptions
+    \item Eclipse debugger has an option to keep multiple breakpoints which helps us to test or debug only the part of the code required.
+    \item The eclipse debugger has the option of Step into and Step Over which helps in debugging the method line by line or helps in skipping the debugging of the method written.
+    \item The values of the variables can be changed while debugging instead of running it again to debug for different values of the variables.
+\end{itemize}
+
+\subsection{Disadvantages :}
+\begin{itemize}
+    \item The Eclipse debugger becomes complex to use for methods which has greater number of variables of different types.
+\end{itemize}
+
+\newpage
+
+\section{Quality attributes}
+\subsection{Description}
+Effort made towards achieving each of below quality attributes is as stated 
+\begin{itemize}
+\item \textbf{Correctness} :
+\begin{itemize}
+\item Have considered all possible values for variables “x” and “b” in the logarithmic function
+\end{itemize}
+\item \textbf{Efficient}:
+\begin{itemize}
+\item The structure of the program used is simple which makes the program to run faster
+\end{itemize}
+\item \textbf{Maintainable} :
+\begin{itemize}
+\item With the help of the Javadoc the code can be easily understood. If any changes are to be made in future it can be done easily
+\end{itemize}
+\item \textbf{Robust} :
+\begin{itemize}
+\item The coding is done in such a way that it doesn’t terminate unexpectedly by checking all the possible conditions at best.
+\end{itemize}
+\item \textbf{Usable} :
+\begin{itemize}
+\item TThe interface used is Textual which is user friendly.
+\end{itemize}
+\end{itemize}
+
+\newpage
+\section{Checkstyle}
+\subsection{Description}
+The Check Style plugin for eclipse is used to check the quality of the source code. It is used to review the code if it follows the standard which is set. The Check Style followed by the team is the \textbf{Google CheckStyle}
+
+
+
+\subsection{Advantages of Checkstyle:}
+\begin{itemize}
+    \item The use of the Check Style in eclipse helps in resolving the formatting issue.
+    \item The warning sign and the instruction helps us to understand the mistake and correct accordingly with the coding standards.
+    \item The eclipse by itself prints or shows the value of the line of code while debugging.
+    \item It helps to combine the number of code fragments written with no coding standards followed. 
+   \end{itemize}
+
+\subsection{Disadvantages :}
+\begin{itemize}
+    \item The Check Style gives the warnings for following the coding standards but does not have an option to correct it automatically
+    \item The  check Style does not ensure the correctness of the code
+\end{itemize}
+\begin{thebibliography}{9}
+\bibitem{Checkstyle}
+CheckStyle,
+\\\texttt{https://en.wikipedia.org/wiki/Checkstyle}
+
+\bibitem{googlestyle} 
+Google style,
+\\\texttt{https://checkstyle.sourceforge.io/google\_style.html}
+
+\bibitem{wiki}
+Eclipse Debugger,
+\\\texttt{https://www.wikihow.com/Debug-with-Eclipse}
+\end{thebibliography}
+\end{document}
+
