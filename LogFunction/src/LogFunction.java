@@ -1,12 +1,18 @@
+import java.text.DecimalFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * F4_Logarithmic Function calculates Log value of x to the base b.
+ * 
+ * @author Sahana Anantha
+ */
 public class LogFunction {
 
   /**
    * This method calculates the Logarithmic value of input x.
    * 
-   * @param xval This is the input parameter 
+   * @param xval This is the input parameter
    * @return output This returns the calculated Logarithmic value of xval
    */
   public static double calculateLog(double xval) {
@@ -46,17 +52,16 @@ public class LogFunction {
     } else {
       System.out.println("Domain error");
     }
-    return 1;
+    return -1;
   }
 
   /**
-   * This is the main method which takes the input valus and calculate the Logarithmic value
-   * using the method calculateLog.
-   * 
-   * @param 
+   * This is the main method which takes the input values and calculate the Logarithmic value using
+   * the method calculateLog.
    */
   public static void main(String[] args) {
     try {
+      DecimalFormat f = new DecimalFormat("##.0000");
       Scanner sc = new Scanner(System.in);
       System.out.println("Enter the value of X of Log(X) to the base b");
       double xval = sc.nextDouble();
@@ -70,15 +75,16 @@ public class LogFunction {
         } else if (base == 1) {
           System.out.println("The value of base equal to 1 is not defineds ");
         } else {
-          double result1 = calculateLog(xval);
-          double result2 = calculateLog(base);
+          double result1 = (float) calculateLog(xval);
+          double result2 = (float) calculateLog(base);
           double result3 = result1 / result2;
-          System.out.println(result3);
+          System.out
+              .println("Result of Log(" + xval + ")to base " + base + " is " + f.format(result3));
         }
       }
       sc.close();
     } catch (InputMismatchException e) {
-      System.out.println("Please enter the valid X value");
+      System.out.println("Please enter the valid value");
     } catch (Exception e) {
       System.out.println("Exception occured");
     }
