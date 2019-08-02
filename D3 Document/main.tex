@@ -1,0 +1,145 @@
+\documentclass[12pt]{report}
+\usepackage[utf8x]{inputenc}
+\usepackage[myheadings]{fullpage}
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+\usepackage{color}
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+\setlength\headheight{15pt}
+\fancyhead[R]{ETERNITY : FUNCTION : log_{b}(x)}
+
+\title{D2 : Logarithmic Function}	
+\author{Sahana Anantha}	
+\date{}
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\setlength{\@fptop}{5pt}
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thetitle}
+\cfoot{\thepage}
+
+\begin{document}
+
+
+\title{ \Large \text{{SOEN-6011   SOFTWARE ENGINEERING PROCESS}}
+		\\ [2.0cm]
+		\HRule{2pt} \\ [0.5cm]
+		\LARGE \textbf{\uppercase{ETERNITY : function : log_{b}(x)}}\\
+		\HRule{2pt} \\ [0.5cm]
+		\textbf{{\Large Deliverable 3}}\\
+		\normalsize  \vspace*{5\baselineskip}}
+
+\date{}
+\author{\LARGE \textbf{
+		SAHANA ANANTHA \\
+		\Large \text{Student Id} : \text{ 40085533}\\
+        \Large \text{Guided By} - Prof. PANKAJ KAMTHAN  \\
+\Large \text {CONCORDIA UNIVERSITY}\\
+\small \text  https://github.com/SahanaAnantha/SOEN-6011 \\}}
+
+\maketitle
+
+
+\renewcommand{\thesection}{\arabic{section}}
+\section{Problem5 - Source Code Review}
+
+\large\textbf{Function: gamma(x)}
+
+\paragraph{}As part of source code review I have used PMD and check style to analyze the program written for gamma function. 
+
+\paragraph{} \textbf{PMD} is source code analyzer which finds the common programming defects like empty unused variables, empty catch blocks, unnecessary object creation, and many more. PMD features many built in checks. It is useful when it is integrated in the build process of Eclipse. It has features to detect flaws, possible bugs and Duplicate code. It can be used as the quality gate to ensure coding standard is met.
+
+\paragraph{} \textbf{Checkstyle} is a development tool to help programmers write Java code that adheres to a coding standard. By default it supports the Google Java Style Guide and Sun Code Conventions. The Plugin can be added to our Eclipse IDE.
+
+\paragraph{}Below are the analysis result:
+\begin{enumerate}
+    \item I was able to compile the given source code successfully.
+    \item There are no undefined variables used in the code.
+    \item From CheckStyle,
+    \begin{itemize}
+        \item The style used is google programming style, but there is some indentation error identified in most of the places.
+        \item Improper use of Javadoc.
+        \item Improper naming convention for variables.
+        \item Missing {} for some if and while conditions.
+    \end{itemize}
+    \item No infinite loop conditions found in the code.
+    \item The program uses some predefined constant variables like iteration =20 in line 11.
+    \item Junit Test contains too many asserts.
+    \item There is an unused local variable E used in gamma test file.
+    \item Avoid Generic exception in line 172.
+\end{enumerate}
+
+\newpage
+\section{Problem 7 - Testing Function F6}
+As part of function F6 testing below are the specification and computing environment used.
+
+\paragraph{}
+Environment:
+
+\begin{itemize}
+    \item Jdk 1.8 and Junit Library
+    \item Windows 10 system hardware
+    \item IDE for running the test case
+
+\end{itemize}
+
+\large \textbf{Function: $ab^x$}  
+\newline where a, b are real constants and X is a real variable. The function will be tested for all the requirements mentioned in the specification. The Source code provided contains all the details required to run the program and verify the results.
+
+\paragraph{}
+Steps followed to test the functionality of $ab^x$ :
+\begin{enumerate}
+    \item The Source code is imported to IDE and complied to make sure that no complication errors.
+    \item The program is executed for different input and results are verified with the actual calculator.
+    \item The test case written by developer is executed successfully without any failures.
+    \item The written test cases covers all the tests to cover basic requirement and prove the system works as expected.
+    \item The function is tested for valid and invalid scenarios and non-numeric values and respective results are verified.
+    \item All individual methods are verified for correctness.
+\end{enumerate}
+
+\begin{table}[]
+\centering
+\begin{tabular}{|c |c| c|} 
+\hline
+TC & Test Scenario & Result \\ [0.5ex] 
+\hline
+1 & All positive integers & PASS \\
+\hline
+2 & Combination of +ve and –ve integer & PASS\\
+\hline
+3 & When B is negative, error message & PASS\\
+\hline
+4 & When B =1, result same as A & PASS\\
+\hline
+5 & When x=0, result same as A & PASS\\
+\hline
+6 & Invalid input, error message & PASS\\
+\hline
+\end{tabular}
+\caption{Test Results}
+\end{table}
+
+\paragraph{}
+Overall, The Function F6 works as expected and correctness is verified with different test inputs. The program meets all the requirements specified.
+
+\begin{thebibliography}{9}
+\bibitem{Checkstyle}
+CheckStyle,
+\\\texttt{https://en.wikipedia.org/wiki/Checkstyle}
+
+\bibitem{googlestyle} 
+Google style,
+\\\texttt{https://checkstyle.sourceforge.io/google\_style.html}
+
+\bibitem{wiki}
+PMD,
+\\\texttt{https://en.wikipedia.org/wiki/PMD\_(software)}
+\end{thebibliography}
+\end{document}
+
